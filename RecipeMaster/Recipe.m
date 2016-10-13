@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  Recipe.m
 //  RecipeMaster
 //
 //  Created by Krzysztof Ignac on 12.10.2016.
 //  Copyright © 2016 EXTENDED. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "Recipe.h"
 
-@interface ViewController : UIViewController
-
+@implementation Recipe
 
 @end
-

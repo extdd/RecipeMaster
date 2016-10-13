@@ -7,14 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07A5856DC5ED8BA510911723 /* libPods-RecipeMasterUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87268792816B9E628F322EF4 /* libPods-RecipeMasterUITests.a */; };
+		2ED0F884AE99094B4F1D8A2B /* libPods-RecipeMaster.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9281164DB67C2E9D90BF80BA /* libPods-RecipeMaster.a */; };
+		3C44DA443E9CFD3613A9C8BF /* libPods-RecipeMasterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7F66B93D5C16B8F22EF4E4 /* libPods-RecipeMasterTests.a */; };
+		94E345BF58C4A4ADD32EA12D /* libPods-RecipeMasterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDBEBFA009EDE2D35920101E /* libPods-RecipeMasterTests.a */; };
+		B816B8841DAE9153002AF2C7 /* Shared.m in Sources */ = {isa = PBXBuildFile; fileRef = B816B8831DAE9153002AF2C7 /* Shared.m */; };
 		B81A79A31DAE373400EE25C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B81A79A21DAE373400EE25C7 /* main.m */; };
 		B81A79A61DAE373400EE25C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B81A79A51DAE373400EE25C7 /* AppDelegate.m */; };
-		B81A79A91DAE373400EE25C7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B81A79A81DAE373400EE25C7 /* ViewController.m */; };
+		B81A79A91DAE373400EE25C7 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B81A79A81DAE373400EE25C7 /* MainViewController.m */; };
 		B81A79AC1DAE373400EE25C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B81A79AA1DAE373400EE25C7 /* Main.storyboard */; };
 		B81A79AE1DAE373400EE25C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B81A79AD1DAE373400EE25C7 /* Assets.xcassets */; };
 		B81A79B11DAE373400EE25C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B81A79AF1DAE373400EE25C7 /* LaunchScreen.storyboard */; };
 		B81A79BC1DAE373500EE25C7 /* RecipeMasterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B81A79BB1DAE373500EE25C7 /* RecipeMasterTests.m */; };
 		B81A79C71DAE373500EE25C7 /* RecipeMasterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B81A79C61DAE373500EE25C7 /* RecipeMasterUITests.m */; };
+		B8B1230C1DAE583B007C3119 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B1230B1DAE583B007C3119 /* DetailViewController.m */; };
+		B8B1230F1DAE5851007C3119 /* MainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B1230E1DAE5851007C3119 /* MainViewModel.m */; };
+		B8B123121DAE585C007C3119 /* DetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B123111DAE585C007C3119 /* DetailViewModel.m */; };
+		B8B123181DAE5893007C3119 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B123171DAE5893007C3119 /* Recipe.m */; };
+		B8D3CC2A1DAEE2E700D7194F /* FacebookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D3CC291DAEE2E700D7194F /* FacebookManager.m */; };
+		B8D3CC311DAF7FF700D7194F /* RoundedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D3CC301DAF7FF700D7194F /* RoundedImage.m */; };
+		B8D3CC341DAF8DE100D7194F /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D3CC331DAF8DE100D7194F /* Networking.m */; };
+		BEE7D26F4F13D479BC3BE040 /* libPods-RecipeMasterUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D559862D8B48323D3F9E14C /* libPods-RecipeMasterUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +48,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C69DBECF7B6F89AB9BF0654 /* Pods-RecipeMasterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeMasterUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeMasterUITests/Pods-RecipeMasterUITests.release.xcconfig"; sourceTree = "<group>"; };
+		374439330229E575DF59E648 /* Pods-RecipeMaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeMaster.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeMaster/Pods-RecipeMaster.release.xcconfig"; sourceTree = "<group>"; };
+		38BA3B27D7F4DD4FAF5B1DB0 /* libPods-RecipeMaster.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RecipeMaster.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5304720FA872E83316FF327E /* Pods-RecipeMaster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeMaster.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeMaster/Pods-RecipeMaster.debug.xcconfig"; sourceTree = "<group>"; };
+		53495A5030D78E4F13EC71DA /* Pods-RecipeMaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeMaster.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeMaster/Pods-RecipeMaster.release.xcconfig"; sourceTree = "<group>"; };
+		53DADAF488CDF673D4341D4D /* Pods-RecipeMasterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeMasterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeMasterTests/Pods-RecipeMasterTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6117273B79617E61E3DE7454 /* Pods-RecipeMasterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeMasterTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeMasterTests/Pods-RecipeMasterTests.release.xcconfig"; sourceTree = "<group>"; };
+		69C8A10E164E0483E3DB5938 /* Pods-RecipeMasterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeMasterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeMasterTests/Pods-RecipeMasterTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7418946CDC8FC6B752DCA795 /* Pods-RecipeMasterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeMasterTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeMasterTests/Pods-RecipeMasterTests.release.xcconfig"; sourceTree = "<group>"; };
+		87268792816B9E628F322EF4 /* libPods-RecipeMasterUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RecipeMasterUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BC5C76F7DB89EB68B9AB8A2 /* Pods-RecipeMasterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeMasterUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeMasterUITests/Pods-RecipeMasterUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8D559862D8B48323D3F9E14C /* libPods-RecipeMasterUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RecipeMasterUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9281164DB67C2E9D90BF80BA /* libPods-RecipeMaster.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RecipeMaster.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		944282ACE6D93F978EF2B870 /* Pods-RecipeMaster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeMaster.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeMaster/Pods-RecipeMaster.debug.xcconfig"; sourceTree = "<group>"; };
+		B816B8821DAE9153002AF2C7 /* Shared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shared.h; sourceTree = "<group>"; };
+		B816B8831DAE9153002AF2C7 /* Shared.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shared.m; sourceTree = "<group>"; };
 		B81A799E1DAE373400EE25C7 /* RecipeMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B81A79A21DAE373400EE25C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B81A79A41DAE373400EE25C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B81A79A51DAE373400EE25C7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B81A79A71DAE373400EE25C7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B81A79A81DAE373400EE25C7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B81A79A71DAE373400EE25C7 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		B81A79A81DAE373400EE25C7 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		B81A79AB1DAE373400EE25C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B81A79AD1DAE373400EE25C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B81A79B01DAE373400EE25C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +80,24 @@
 		B81A79C21DAE373500EE25C7 /* RecipeMasterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeMasterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B81A79C61DAE373500EE25C7 /* RecipeMasterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecipeMasterUITests.m; sourceTree = "<group>"; };
 		B81A79C81DAE373500EE25C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8B1230A1DAE583B007C3119 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		B8B1230B1DAE583B007C3119 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		B8B1230D1DAE5851007C3119 /* MainViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewModel.h; sourceTree = "<group>"; };
+		B8B1230E1DAE5851007C3119 /* MainViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewModel.m; sourceTree = "<group>"; };
+		B8B123101DAE585C007C3119 /* DetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewModel.h; sourceTree = "<group>"; };
+		B8B123111DAE585C007C3119 /* DetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewModel.m; sourceTree = "<group>"; };
+		B8B123161DAE5893007C3119 /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
+		B8B123171DAE5893007C3119 /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
+		B8D3CC281DAEE2E700D7194F /* FacebookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookManager.h; sourceTree = "<group>"; };
+		B8D3CC291DAEE2E700D7194F /* FacebookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookManager.m; sourceTree = "<group>"; };
+		B8D3CC2F1DAF7FF700D7194F /* RoundedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundedImage.h; sourceTree = "<group>"; };
+		B8D3CC301DAF7FF700D7194F /* RoundedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundedImage.m; sourceTree = "<group>"; };
+		B8D3CC321DAF8DE100D7194F /* Networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
+		B8D3CC331DAF8DE100D7194F /* Networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
+		BC7F66B93D5C16B8F22EF4E4 /* libPods-RecipeMasterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RecipeMasterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDC969AD2517ADEE02126A4F /* Pods-RecipeMasterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeMasterUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeMasterUITests/Pods-RecipeMasterUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E76642E28BAC07F7ECB52DBE /* Pods-RecipeMasterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeMasterUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeMasterUITests/Pods-RecipeMasterUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EDBEBFA009EDE2D35920101E /* libPods-RecipeMasterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RecipeMasterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ED0F884AE99094B4F1D8A2B /* libPods-RecipeMaster.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +113,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94E345BF58C4A4ADD32EA12D /* libPods-RecipeMasterTests.a in Frameworks */,
+				3C44DA443E9CFD3613A9C8BF /* libPods-RecipeMasterTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,19 +122,44 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEE7D26F4F13D479BC3BE040 /* libPods-RecipeMasterUITests.a in Frameworks */,
+				07A5856DC5ED8BA510911723 /* libPods-RecipeMasterUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		003E1B5E847855CD77B882F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38BA3B27D7F4DD4FAF5B1DB0 /* libPods-RecipeMaster.a */,
+				BC7F66B93D5C16B8F22EF4E4 /* libPods-RecipeMasterTests.a */,
+				87268792816B9E628F322EF4 /* libPods-RecipeMasterUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		526F55195485350E5FDBC38D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				944282ACE6D93F978EF2B870 /* Pods-RecipeMaster.debug.xcconfig */,
+				53495A5030D78E4F13EC71DA /* Pods-RecipeMaster.release.xcconfig */,
+				53DADAF488CDF673D4341D4D /* Pods-RecipeMasterTests.debug.xcconfig */,
+				6117273B79617E61E3DE7454 /* Pods-RecipeMasterTests.release.xcconfig */,
+				E76642E28BAC07F7ECB52DBE /* Pods-RecipeMasterUITests.debug.xcconfig */,
+				8BC5C76F7DB89EB68B9AB8A2 /* Pods-RecipeMasterUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B81A79951DAE373400EE25C7 = {
 			isa = PBXGroup;
 			children = (
 				B81A79A01DAE373400EE25C7 /* RecipeMaster */,
-				B81A79BA1DAE373500EE25C7 /* RecipeMasterTests */,
-				B81A79C51DAE373500EE25C7 /* RecipeMasterUITests */,
-				B81A799F1DAE373400EE25C7 /* Products */,
+				B8B123191DAE58D0007C3119 /* Rest */,
+				526F55195485350E5FDBC38D /* Pods */,
+				003E1B5E847855CD77B882F3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,19 +171,18 @@
 				B81A79C21DAE373500EE25C7 /* RecipeMasterUITests.xctest */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		B81A79A01DAE373400EE25C7 /* RecipeMaster */ = {
 			isa = PBXGroup;
 			children = (
-				B81A79A41DAE373400EE25C7 /* AppDelegate.h */,
-				B81A79A51DAE373400EE25C7 /* AppDelegate.m */,
-				B81A79A71DAE373400EE25C7 /* ViewController.h */,
-				B81A79A81DAE373400EE25C7 /* ViewController.m */,
 				B81A79AA1DAE373400EE25C7 /* Main.storyboard */,
+				B8B123131DAE5860007C3119 /* View */,
+				B8B123151DAE587F007C3119 /* ViewModel */,
+				B8B123141DAE5868007C3119 /* Model */,
+				B8D3CC2B1DAF765A00D7194F /* Utils */,
 				B81A79AD1DAE373400EE25C7 /* Assets.xcassets */,
-				B81A79AF1DAE373400EE25C7 /* LaunchScreen.storyboard */,
-				B81A79B21DAE373400EE25C7 /* Info.plist */,
 				B81A79A11DAE373400EE25C7 /* Supporting Files */,
 			);
 			path = RecipeMaster;
@@ -117,7 +191,11 @@
 		B81A79A11DAE373400EE25C7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B81A79A41DAE373400EE25C7 /* AppDelegate.h */,
+				B81A79A51DAE373400EE25C7 /* AppDelegate.m */,
 				B81A79A21DAE373400EE25C7 /* main.m */,
+				B81A79B21DAE373400EE25C7 /* Info.plist */,
+				B81A79AF1DAE373400EE25C7 /* LaunchScreen.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -129,7 +207,7 @@
 				B81A79BD1DAE373500EE25C7 /* Info.plist */,
 			);
 			path = RecipeMasterTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		B81A79C51DAE373500EE25C7 /* RecipeMasterUITests */ = {
 			isa = PBXGroup;
@@ -138,6 +216,98 @@
 				B81A79C81DAE373500EE25C7 /* Info.plist */,
 			);
 			path = RecipeMasterUITests;
+			sourceTree = SOURCE_ROOT;
+		};
+		B8B123131DAE5860007C3119 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B81A79A71DAE373400EE25C7 /* MainViewController.h */,
+				B81A79A81DAE373400EE25C7 /* MainViewController.m */,
+				B8B1230A1DAE583B007C3119 /* DetailViewController.h */,
+				B8B1230B1DAE583B007C3119 /* DetailViewController.m */,
+				B8B1231D1DAE597A007C3119 /* Subview */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B8B123141DAE5868007C3119 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B8B123161DAE5893007C3119 /* Recipe.h */,
+				B8B123171DAE5893007C3119 /* Recipe.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B8B123151DAE587F007C3119 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B8B1230D1DAE5851007C3119 /* MainViewModel.h */,
+				B8B1230E1DAE5851007C3119 /* MainViewModel.m */,
+				B8B123101DAE585C007C3119 /* DetailViewModel.h */,
+				B8B123111DAE585C007C3119 /* DetailViewModel.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		B8B123191DAE58D0007C3119 /* Rest */ = {
+			isa = PBXGroup;
+			children = (
+				B81A79BA1DAE373500EE25C7 /* RecipeMasterTests */,
+				B81A79C51DAE373500EE25C7 /* RecipeMasterUITests */,
+				B81A799F1DAE373400EE25C7 /* Products */,
+				FD74B8614BF5597D1200B6D7 /* Pods */,
+				CAF3EB52F6B6E8769E15C5D9 /* Frameworks */,
+			);
+			name = Rest;
+			path = RecipeMaster;
+			sourceTree = "<group>";
+		};
+		B8B1231D1DAE597A007C3119 /* Subview */ = {
+			isa = PBXGroup;
+			children = (
+				B8D3CC2F1DAF7FF700D7194F /* RoundedImage.h */,
+				B8D3CC301DAF7FF700D7194F /* RoundedImage.m */,
+			);
+			name = Subview;
+			sourceTree = "<group>";
+		};
+		B8D3CC2B1DAF765A00D7194F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B8D3CC281DAEE2E700D7194F /* FacebookManager.h */,
+				B8D3CC291DAEE2E700D7194F /* FacebookManager.m */,
+				B8D3CC321DAF8DE100D7194F /* Networking.h */,
+				B8D3CC331DAF8DE100D7194F /* Networking.m */,
+				B816B8821DAE9153002AF2C7 /* Shared.h */,
+				B816B8831DAE9153002AF2C7 /* Shared.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		CAF3EB52F6B6E8769E15C5D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9281164DB67C2E9D90BF80BA /* libPods-RecipeMaster.a */,
+				EDBEBFA009EDE2D35920101E /* libPods-RecipeMasterTests.a */,
+				8D559862D8B48323D3F9E14C /* libPods-RecipeMasterUITests.a */,
+			);
+			name = Frameworks;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		FD74B8614BF5597D1200B6D7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5304720FA872E83316FF327E /* Pods-RecipeMaster.debug.xcconfig */,
+				374439330229E575DF59E648 /* Pods-RecipeMaster.release.xcconfig */,
+				69C8A10E164E0483E3DB5938 /* Pods-RecipeMasterTests.debug.xcconfig */,
+				7418946CDC8FC6B752DCA795 /* Pods-RecipeMasterTests.release.xcconfig */,
+				BDC969AD2517ADEE02126A4F /* Pods-RecipeMasterUITests.debug.xcconfig */,
+				1C69DBECF7B6F89AB9BF0654 /* Pods-RecipeMasterUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,9 +317,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B81A79CB1DAE373500EE25C7 /* Build configuration list for PBXNativeTarget "RecipeMaster" */;
 			buildPhases = (
+				1EE556B53CDA707E433149FB /* 📦 Check Pods Manifest.lock */,
 				B81A799A1DAE373400EE25C7 /* Sources */,
 				B81A799B1DAE373400EE25C7 /* Frameworks */,
 				B81A799C1DAE373400EE25C7 /* Resources */,
+				AEE99FA2D5B256AF63470D82 /* 📦 Embed Pods Frameworks */,
+				40B194B48DB4ABB0789C49AA /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,9 +337,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B81A79CE1DAE373500EE25C7 /* Build configuration list for PBXNativeTarget "RecipeMasterTests" */;
 			buildPhases = (
+				F5485EE27822ED0D01AD4C7F /* 📦 Check Pods Manifest.lock */,
 				B81A79B31DAE373500EE25C7 /* Sources */,
 				B81A79B41DAE373500EE25C7 /* Frameworks */,
 				B81A79B51DAE373500EE25C7 /* Resources */,
+				C73A639C7BA55572AE408381 /* 📦 Embed Pods Frameworks */,
+				9FBDE59EF27281E1D8B4F7CB /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,9 +358,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B81A79D11DAE373500EE25C7 /* Build configuration list for PBXNativeTarget "RecipeMasterUITests" */;
 			buildPhases = (
+				C9E0AAB2E3C32FFEB14833C7 /* 📦 Check Pods Manifest.lock */,
 				B81A79BE1DAE373500EE25C7 /* Sources */,
 				B81A79BF1DAE373500EE25C7 /* Frameworks */,
 				B81A79C01DAE373500EE25C7 /* Resources */,
+				01962AE784314DE9D551D381 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -271,14 +449,145 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01962AE784314DE9D551D381 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RecipeMasterUITests/Pods-RecipeMasterUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1EE556B53CDA707E433149FB /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		40B194B48DB4ABB0789C49AA /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RecipeMaster/Pods-RecipeMaster-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FBDE59EF27281E1D8B4F7CB /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RecipeMasterTests/Pods-RecipeMasterTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEE99FA2D5B256AF63470D82 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RecipeMaster/Pods-RecipeMaster-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C73A639C7BA55572AE408381 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RecipeMasterTests/Pods-RecipeMasterTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9E0AAB2E3C32FFEB14833C7 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F5485EE27822ED0D01AD4C7F /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B81A799A1DAE373400EE25C7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B81A79A91DAE373400EE25C7 /* ViewController.m in Sources */,
+				B816B8841DAE9153002AF2C7 /* Shared.m in Sources */,
+				B81A79A91DAE373400EE25C7 /* MainViewController.m in Sources */,
+				B8D3CC311DAF7FF700D7194F /* RoundedImage.m in Sources */,
+				B8D3CC341DAF8DE100D7194F /* Networking.m in Sources */,
+				B8B123181DAE5893007C3119 /* Recipe.m in Sources */,
+				B8B123121DAE585C007C3119 /* DetailViewModel.m in Sources */,
 				B81A79A61DAE373400EE25C7 /* AppDelegate.m in Sources */,
 				B81A79A31DAE373400EE25C7 /* main.m in Sources */,
+				B8B1230F1DAE5851007C3119 /* MainViewModel.m in Sources */,
+				B8B1230C1DAE583B007C3119 /* DetailViewController.m in Sources */,
+				B8D3CC2A1DAEE2E700D7194F /* FacebookManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +660,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -373,7 +683,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -399,6 +709,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -415,7 +726,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -425,30 +736,37 @@
 		};
 		B81A79CC1DAE373500EE25C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5304720FA872E83316FF327E /* Pods-RecipeMaster.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MRC524739E;
 				INFOPLIST_FILE = RecipeMaster/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.extdd.RecipeMaster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		B81A79CD1DAE373500EE25C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 374439330229E575DF59E648 /* Pods-RecipeMaster.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MRC524739E;
 				INFOPLIST_FILE = RecipeMaster/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.extdd.RecipeMaster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		B81A79CF1DAE373500EE25C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69C8A10E164E0483E3DB5938 /* Pods-RecipeMasterTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = MRC524739E;
@@ -462,6 +780,7 @@
 		};
 		B81A79D01DAE373500EE25C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7418946CDC8FC6B752DCA795 /* Pods-RecipeMasterTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = MRC524739E;
@@ -475,6 +794,7 @@
 		};
 		B81A79D21DAE373500EE25C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDC969AD2517ADEE02126A4F /* Pods-RecipeMasterUITests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = MRC524739E;
 				INFOPLIST_FILE = RecipeMasterUITests/Info.plist;
@@ -487,6 +807,7 @@
 		};
 		B81A79D31DAE373500EE25C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C69DBECF7B6F89AB9BF0654 /* Pods-RecipeMasterUITests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = MRC524739E;
 				INFOPLIST_FILE = RecipeMasterUITests/Info.plist;
@@ -516,6 +837,7 @@
 				B81A79CD1DAE373500EE25C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B81A79CE1DAE373500EE25C7 /* Build configuration list for PBXNativeTarget "RecipeMasterTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +846,7 @@
 				B81A79D01DAE373500EE25C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B81A79D11DAE373500EE25C7 /* Build configuration list for PBXNativeTarget "RecipeMasterUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +855,7 @@
 				B81A79D31DAE373500EE25C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
