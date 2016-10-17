@@ -1,6 +1,6 @@
 # RecipeMaster
 
-App written in Objective-C for iOS 9.0 and higher. MVVM architecture.
+App written in Objective-C for iOS 8.0 and higher. MVVM architecture.
 
 ## Installation 
 
