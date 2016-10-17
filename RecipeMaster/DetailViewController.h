@@ -10,9 +10,12 @@
 #import "DetailViewModel.h"
 #import "FacebookManager.h"
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *barUserStatus;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *collectionViewHeightConstraint;
 
 @property (strong, nonatomic) DetailViewModel *detailViewModel;
 @property (weak, nonatomic) FacebookManager *facebookManager;

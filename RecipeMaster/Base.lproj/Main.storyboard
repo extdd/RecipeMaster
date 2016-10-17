@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--RecipeMaster-->
+        <!--Main-->
         <scene sceneID="PY2-gA-C3c">
             <objects>
                 <viewController id="eXg-XS-JT9" customClass="MainViewController" sceneMemberID="viewController">
@@ -23,7 +23,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fo1-l2-5FZ">
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P2E-hj-c64" userLabel="RoundedImage" customClass="RoundedImage">
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.86001861170000005" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="P2E-hj-c64" secondAttribute="height" multiplier="1:1" id="l8v-nP-c3R"/>
                                             <constraint firstAttribute="width" secondItem="P2E-hj-c64" secondAttribute="height" multiplier="1:1" id="rQb-gq-PAl"/>
@@ -74,14 +74,15 @@
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="WaI-1o-3MY"/>
-                        <barButtonItem systemItem="action" id="fUb-HF-WVF">
+                        <barButtonItem systemItem="add" id="fUb-HF-WVF">
                             <connections>
                                 <action selector="showAlertMenu:" destination="eXg-XS-JT9" id="2ze-5T-vew"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="RecipeMaster" id="mMn-aD-VlD"/>
+                    <navigationItem key="navigationItem" title="Main" id="mMn-aD-VlD"/>
                     <connections>
+                        <outlet property="barAddButton" destination="fUb-HF-WVF" id="5n6-z8-aDU"/>
                         <outlet property="barUserStatus" destination="Kzc-Rn-Obe" id="eOJ-5j-zkY"/>
                         <outlet property="recipeImage" destination="P2E-hj-c64" id="mdy-K2-Kch"/>
                         <segue destination="VpI-Cm-jkb" kind="show" identifier="showDetails" id="M5L-Lm-pKr"/>
@@ -89,12 +90,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zxn-qr-Iz0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="483" y="117"/>
+            <point key="canvasLocation" x="-380" y="105"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Detail-->
         <scene sceneID="dYo-0g-lPQ">
             <objects>
-                <viewController id="VpI-Cm-jkb" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController title="Detail" automaticallyAdjustsScrollViewInsets="NO" id="VpI-Cm-jkb" customClass="DetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zov-b5-EXK"/>
                         <viewControllerLayoutGuide type="bottom" id="sL2-K9-NsQ"/>
@@ -102,7 +103,19 @@
                     <view key="view" contentMode="scaleToFill" id="H41-UQ-Ywc">
                         <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="140" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W8J-Ga-L15">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <sections/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sL2-K9-NsQ" firstAttribute="top" secondItem="W8J-Ga-L15" secondAttribute="bottom" id="7YN-dB-GQa"/>
+                            <constraint firstItem="W8J-Ga-L15" firstAttribute="leading" secondItem="H41-UQ-Ywc" secondAttribute="leading" id="YZB-pR-hyu"/>
+                            <constraint firstItem="W8J-Ga-L15" firstAttribute="top" secondItem="zov-b5-EXK" secondAttribute="bottom" id="dwO-Q0-JBd"/>
+                            <constraint firstAttribute="trailing" secondItem="W8J-Ga-L15" secondAttribute="trailing" id="oID-A3-iO3"/>
+                        </constraints>
                     </view>
                     <toolbarItems>
                         <barButtonItem systemItem="flexibleSpace" id="rhA-qO-Fl6"/>
@@ -113,11 +126,12 @@
                     </toolbarItems>
                     <connections>
                         <outlet property="barUserStatus" destination="YnA-Wc-1fY" id="gAN-hT-j0k"/>
+                        <outlet property="tableView" destination="W8J-Ga-L15" id="HVj-1a-8bR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eCY-L8-hcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1162" y="117"/>
+            <point key="canvasLocation" x="297.10144927536237" y="103.53260869565219"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AcR-9h-aQL">
@@ -144,7 +158,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="taE-aV-JG1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-199" y="117"/>
+            <point key="canvasLocation" x="-1062" y="105"/>
         </scene>
     </scenes>
 </document>

@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  RecipeMaster
+
+  Created by Krzysztof Ignac on 16.10.2016.
+  Copyright © 2016 EXTENDED. All rights reserved.
+*/
+
+"GetTheRecipe" = "Zobacz przepis";
+"LoginToFacebook" = "Zaloguj do Facebook'a";
+"LogoutOfFacebook" = "Wyloguj z Facebook'a";
+"LoggedAs" = "Zalogowany jako";
+"NotLoggedUser" = "Niezalogowany użytkownik";
+"SaveImage" = "Czy chcesz zapisać obrazek?";
+"SaveImageSuccess" = "Obrazek został zapisany";
+"SaveImageFail" = "Obrazek nie został zapisany";
+"Yes" = "Tak";
+"Cancel" = "Anuluj";
+"Close" = "Zamknij";
+
+"Ingredients" = "Składniki";
+"Preparing" = "Sposób przygotowania";
+"Images" = "Galeria zdjęć";

@@ -11,7 +11,6 @@
 
 @implementation Networking
 
-
 + (void)loadDataByURL:(NSString *)url complete:(void (^)(id data))complete {
 
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
@@ -33,7 +32,6 @@
     [dataTask resume];
     
 }
-
 
 + (void)loadImageByURL:(NSString *)url complete:(void (^)(UIImage *image))complete {
     

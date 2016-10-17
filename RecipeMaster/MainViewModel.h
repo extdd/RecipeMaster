@@ -11,7 +11,7 @@
 
 @interface MainViewModel : NSObject
 
-@property (strong, nonatomic) NSDictionary *recipesData;
+@property (strong, nonatomic) NSArray *recipes;
 @property (strong, nonatomic) Recipe *activeRecipe;
 
 @end

@@ -7,16 +7,28 @@
 //
 
 #import "DetailViewModel.h"
+#import "Shared.h"
 
 @implementation DetailViewModel
 
-- (instancetype)init {
+- (void)initData {
     
-    self = [super init];
-    if (self) {
-        
-    }
-    return self;
+    self.tableData = [[NSMutableArray alloc] init];
+    
+    [self.tableData addObject:@{@"id": self.activeRecipe.title.lowercaseString,
+                           @"content": self.activeRecipe.descriptionText,
+                           @"style": TextContentStylePlain}];
+    
+    [self.tableData addObject:@{@"id": @"ingredients",
+                           @"content": self.activeRecipe.ingredients,
+                           @"style": TextContentStyleDashed}];
+    
+    [self.tableData addObject:@{@"id": @"preparing",
+                           @"content": self.activeRecipe.preparing,
+                           @"style": TextContentStyleNumbered}];
+    
+    [self.tableData addObject:@{@"id": @"images",
+                           @"content": self.activeRecipe.images}];
     
 }
 

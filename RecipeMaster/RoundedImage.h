@@ -15,6 +15,8 @@
 
 - (void)initUI;
 - (void)setImageURL:(NSString *)url withTitle:(NSString *)title;
-- (void)updateLayoutSubviews;
+- (void)updateMask;
+- (void)hide;
+- (void)show;
 
 @end

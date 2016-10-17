@@ -13,8 +13,8 @@
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *barUserStatus;
 @property (weak, nonatomic) IBOutlet RoundedImage *recipeImage;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *barAddButton;
 
 - (IBAction)showAlertMenu:(id)sender;
 
 @end
-

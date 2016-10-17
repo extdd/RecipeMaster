@@ -24,8 +24,8 @@
     self = [super init];
     if (self) {
         
-        userStatusLoginText = @"Logged as";
-        userStatusLogoutText = @"Not logged user";
+        userStatusLoginText = NSLocalizedString(@"LoggedAs", nil);
+        userStatusLogoutText = NSLocalizedString(@"NotLoggedUser", nil);
         self.fullUserStatus = userStatusLogoutText;
         
     }
@@ -48,8 +48,6 @@
                                    }];
     
 }
-
-
 
 - (void)logout {
     

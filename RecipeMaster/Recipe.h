@@ -14,6 +14,6 @@
 @property (strong, nonatomic) NSString *descriptionText;
 @property (strong, nonatomic) NSArray *ingredients;
 @property (strong, nonatomic) NSArray *preparing;
-@property (strong, nonatomic) NSArray *images;
+@property (strong, nonatomic) NSMutableArray *images;
 
 @end

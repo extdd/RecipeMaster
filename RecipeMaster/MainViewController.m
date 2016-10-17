@@ -16,7 +16,7 @@
     
     MainViewModel *mainViewModel;
     FacebookManager *facebookManager;
-    
+
 }
 
 - (void)viewDidLoad {
@@ -26,20 +26,48 @@
     mainViewModel = [[MainViewModel alloc] init];
     facebookManager = [[FacebookManager alloc] init];
 
+    self.navigationItem.title = @"RecipeMaster";
     self.barUserStatus.title = @"";
     self.barUserStatus.enabled = NO;
+    self.barAddButton.enabled = NO;
     
     [self updateUserStatus];
     [self initObservers];
     [self setStatusBarBackgroundColor:[UIColor colorWithRed:0.83 green:0.18 blue:0.18 alpha:1.0]];
     
+    //for testing only
+    [self.recipeImage addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapRecipeImage)]];
+    
+}
+
+- (void)didTapRecipeImage {
+    
+    //for testing only
+    [self showDetails];
+    
 }
 
 - (void)viewDidLayoutSubviews {
 
+    //NSLog(@"- viewDidLayoutSubviews");
     [super viewDidLayoutSubviews];
-    [self.recipeImage updateLayoutSubviews];
+    [self.recipeImage updateMask];
 
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    //hide and update circle mask
+    //[self.recipeImage hide];
+    
+}
+
+
+- (void)viewDidAppear:(BOOL)animated {
+    
+    [self.recipeImage updateMask];
+    //[self.recipeImage show];
+    
 }
 
 # pragma mark - UI
@@ -48,11 +76,11 @@
     
     NSString *imgURL;
     if (mainViewModel.activeRecipe.images.count > 0) {
-        imgURL = mainViewModel.activeRecipe.images[0];
+        imgURL = [mainViewModel.activeRecipe.images[0] valueForKey:@"url"];
     }
     
     [self.recipeImage setImageURL:imgURL withTitle:mainViewModel.activeRecipe.title];
-    
+     
 }
 
 - (void)updateUserStatus {
@@ -102,31 +130,33 @@
                                                                    message:nil
                                                             preferredStyle:UIAlertControllerStyleActionSheet];
     
-    UIAlertAction *itemRecipe = [UIAlertAction actionWithTitle:@"Get the recipe" style:UIAlertActionStyleDefault
-                                                          handler:^(UIAlertAction * action) {
+    UIAlertAction *itemRecipe = [UIAlertAction actionWithTitle:NSLocalizedString(@"GetTheRecipe", nil)
+                                                         style:UIAlertActionStyleDefault
+                                                       handler:^(UIAlertAction *action) {
                                                               [self showDetails];
                                                           }];
     
     UIAlertAction *itemFacebook;
     if (![facebookManager checkToken]) {
-        itemFacebook = [UIAlertAction actionWithTitle:@"Log in to Facebook" style:UIAlertActionStyleDefault
-                                          handler:^(UIAlertAction * action) {
-                                              [facebookManager loginFromViewController:self];
-                                          }];
+        
+        itemFacebook = [UIAlertAction actionWithTitle:NSLocalizedString(@"LoginToFacebook", nil)
+                                                style:UIAlertActionStyleDefault
+                                              handler:^(UIAlertAction *action) {
+                                                  [facebookManager loginFromViewController:self];
+                                              }];
     } else {
-        itemFacebook = [UIAlertAction actionWithTitle:@"Log out of Facebook" style:UIAlertActionStyleDestructive
-                                          handler:^(UIAlertAction * action) {
-                                              [facebookManager logout];
-                                              [self updateUserStatus];
-                                          }];
+        itemFacebook = [UIAlertAction actionWithTitle:NSLocalizedString(@"LogoutOfFacebook", nil)
+                                                style:UIAlertActionStyleDestructive
+                                              handler:^(UIAlertAction *action) {
+                                                  [facebookManager logout];
+                                              }];
     }
     
-    UIAlertAction *itemCancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *itemCancel = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel handler:nil];
     
     [alert addAction:itemRecipe];
     [alert addAction:itemFacebook];
     [alert addAction:itemCancel];
-    
     [self presentViewController:alert animated:YES completion:nil];
     
 }
@@ -135,7 +165,7 @@
 
 - (void)didLoadData:(NSNotification *)notification {
     
-    //NSLog(@"didLoadData %@:", mainViewModel.recipesData);
+    self.barAddButton.enabled = YES;
     [self updateUI];
     
 }
@@ -143,22 +173,19 @@
 
 - (void)didLoadFacebookUserData:(NSNotification *)notification {
     
-    //NSLog(@"didLoadFacebookUserData %@", notification.object);
     [self updateUserStatus];
     
 }
 
 - (void)didLoginFacebook:(NSNotification *)notification {
     
-    //NSLog(@"didLoginFacebook");
     [self updateUserStatus];
     
 }
 
 
 - (void)didLogoutFacebook:(NSNotification *)notification {
-    
-    //NSLog(@"didLogoutFacebook");
+
     [self updateUserStatus];
     
 }

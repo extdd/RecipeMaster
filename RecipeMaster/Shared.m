@@ -12,4 +12,8 @@ NSString * const DataLoadCompleteNotification = @"dataLoadCompleteNotification";
 NSString * const FacebookLoginNotification = @"facebookLoginNotification";
 NSString * const FacebookLogoutNotification = @"facebookLogoutNotification";
 NSString * const FacebookUserDataLoadCompleteNotification = @"facebookUserDataLoadCompleteNotification";
+NSString * const ImageWillSaveToCameraRollNotification = @"imageWillSaveToCameraRollNotification";
 
+NSString * const TextContentStylePlain = @"textContentStylePlain";
+NSString * const TextContentStyleDashed = @"textContentStyleDashed" ;
+NSString * const TextContentStyleNumbered = @"textContentStyleNumbered";

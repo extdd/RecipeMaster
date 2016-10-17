@@ -12,3 +12,8 @@ extern NSString * const DataLoadCompleteNotification;
 extern NSString * const FacebookLoginNotification;
 extern NSString * const FacebookLogoutNotification;
 extern NSString * const FacebookUserDataLoadCompleteNotification;
+extern NSString * const ImageWillSaveToCameraRollNotification;
+
+extern NSString * const TextContentStylePlain;
+extern NSString * const TextContentStyleDashed;
+extern NSString * const TextContentStyleNumbered;

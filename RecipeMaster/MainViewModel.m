@@ -29,15 +29,22 @@
     
 }
 
-- (void)setActiveRecipeByData:(NSDictionary *)data {
+- (void)addRecipeByDictionary:(NSDictionary *)data {
     
-    self.activeRecipe = [[Recipe alloc] init];
-    self.activeRecipe.title = (NSString *)[data valueForKey:@"title"];
-    self.activeRecipe.descriptionText = (NSString *)[data valueForKey:@"description"];
-    self.activeRecipe.ingredients = (NSArray *)[data valueForKey:@"ingredients"];
-    self.activeRecipe.preparing = (NSArray *)[data valueForKey:@"preparing"];
-    self.activeRecipe.images = (NSArray *)[data valueForKey:@"imgs"];
-
+    Recipe *recipe = [[Recipe alloc] init];
+    recipe.title = (NSString *)[data valueForKey:@"title"];
+    recipe.descriptionText = (NSString *)[data valueForKey:@"description"];
+    recipe.ingredients = (NSArray *)[data valueForKey:@"ingredients"];
+    recipe.preparing = (NSArray *)[data valueForKey:@"preparing"];
+    recipe.images = [[NSMutableArray alloc] init];
+    
+    NSArray *imgs = (NSArray *)[data valueForKey:@"imgs"];
+    
+    for (NSString *url in imgs){
+        [recipe.images addObject:[[NSMutableDictionary alloc] initWithObjectsAndKeys:url, @"url", [[NSData alloc] init], @"data", nil]];
+    }
+    
+    self.activeRecipe = recipe;
 }
 
 # pragma mark - REMOTE DATA
@@ -47,10 +54,9 @@
     [Networking loadDataByURL:requestURL complete:^(id data) {
         if (data) {
             
-            self.recipesData = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-            [self setActiveRecipeByData:self.recipesData];
-            
+            [self addRecipeByDictionary:[NSJSONSerialization JSONObjectWithData:data options:0 error:nil]];
             [[NSNotificationCenter defaultCenter] postNotificationName:DataLoadCompleteNotification object:nil];
+            
         }
     }];
     
