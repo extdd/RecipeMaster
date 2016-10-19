@@ -94,8 +94,8 @@
         cell = [tableView dequeueReusableCellWithIdentifier:@"TextCell" forIndexPath:indexPath];
         
         TextCell *textCell = (TextCell *)cell;
-        [textCell setTextContentWithStyle:[self.detailViewModel.tableData[indexPath.section] valueForKey:@"style"]
-                              textContent:[self.detailViewModel.tableData[indexPath.section] valueForKey:@"content"]];
+        textCell.textView.text = [self.detailViewModel getTextForRowData:[self.detailViewModel.tableData[indexPath.section] valueForKey:@"content"]
+                                                               withStyle:[self.detailViewModel.tableData[indexPath.section] valueForKey:@"style"]];
         
     }
 

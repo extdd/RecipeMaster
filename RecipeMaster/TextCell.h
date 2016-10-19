@@ -11,10 +11,6 @@
 
 @interface TextCell : UITableViewCell
 
-- (void)setTextContentWithStyle:(NSString *)style textContent:(id)content;
-
 @property (strong, nonatomic) UITextView *textView;
-@property (strong, nonatomic) id textContent;
-@property (strong, nonatomic) NSString *textContentStyle;
 
 @end

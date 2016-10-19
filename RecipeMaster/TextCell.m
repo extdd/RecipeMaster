@@ -31,46 +31,6 @@
     
 }
 
-- (void)setTextContentWithStyle:(NSString *)style textContent:(id)content {
-
-    if ([style isEqualToString:TextContentStylePlain]) {
-  
-        self.textView.text = (NSString *)content;
-        
-    } else  {
-        
-        NSArray *items = (NSArray *)content;
-        NSString *contentString = [[NSMutableString alloc] init];
-        int i = 1;
-        
-        for (NSString *item in items) {
-            
-            if ([style isEqualToString:TextContentStyleNumbered]) {
-                
-                contentString = [contentString stringByAppendingString:[NSString stringWithFormat:@"%i. %@", i, item]];
-                if (i < items.count - 1) {
-                    //extra new line between every items only for a numbered list
-                    contentString = [contentString stringByAppendingString:@"\n\n"];
-                }
-                
-            } else {
-                
-                contentString = [contentString stringByAppendingString:[NSString stringWithFormat:@"- %@", item]];
-                if (i < items.count - 1) {
-                    contentString = [contentString stringByAppendingString:@"\n"];
-                }
-            }
-        
-            i++;
-            
-        }
-        
-        self.textView.text = contentString;
-        
-    }
-    
-}
-
 - (void)initTextView {
     
     self.textView = [[UITextView alloc] initWithFrame:CGRectZero];

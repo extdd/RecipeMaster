@@ -31,6 +31,7 @@
 		B8D3CC311DAF7FF700D7194F /* RoundedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D3CC301DAF7FF700D7194F /* RoundedImage.m */; };
 		B8D3CC341DAF8DE100D7194F /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D3CC331DAF8DE100D7194F /* Networking.m */; };
 		B8F0B8D61DB0CDD100D472AC /* GalleryImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F0B8D51DB0CDD100D472AC /* GalleryImageCell.m */; };
+		B8F1E6531DB7CDE5004577B4 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B8F1E6521DB7CDE5004577B4 /* .gitignore */; };
 		BEE7D26F4F13D479BC3BE040 /* libPods-RecipeMasterUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D559862D8B48323D3F9E14C /* libPods-RecipeMasterUITests.a */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +107,7 @@
 		B8D3CC331DAF8DE100D7194F /* Networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
 		B8F0B8D41DB0CDD100D472AC /* GalleryImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryImageCell.h; sourceTree = "<group>"; };
 		B8F0B8D51DB0CDD100D472AC /* GalleryImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryImageCell.m; sourceTree = "<group>"; };
+		B8F1E6521DB7CDE5004577B4 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
 		BC7F66B93D5C16B8F22EF4E4 /* libPods-RecipeMasterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RecipeMasterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC969AD2517ADEE02126A4F /* Pods-RecipeMasterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeMasterUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeMasterUITests/Pods-RecipeMasterUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E76642E28BAC07F7ECB52DBE /* Pods-RecipeMasterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeMasterUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeMasterUITests/Pods-RecipeMasterUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 		B81A79A11DAE373400EE25C7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B8F1E6521DB7CDE5004577B4 /* .gitignore */,
 				B84E47221DB42E55007076EB /* Localizable.strings */,
 				B81A79A41DAE373400EE25C7 /* AppDelegate.h */,
 				B81A79A51DAE373400EE25C7 /* AppDelegate.m */,
@@ -447,6 +450,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8F1E6531DB7CDE5004577B4 /* .gitignore in Resources */,
 				B81A79B11DAE373400EE25C7 /* LaunchScreen.storyboard in Resources */,
 				B84E47201DB42E55007076EB /* Localizable.strings in Resources */,
 				B81A79AE1DAE373400EE25C7 /* Assets.xcassets in Resources */,

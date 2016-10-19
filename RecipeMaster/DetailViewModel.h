@@ -15,5 +15,6 @@
 @property (strong, nonatomic) NSMutableArray *tableData;
 
 - (void)initData;
+- (NSString *)getTextForRowData:(id)data withStyle:(NSString *)style;
 
 @end
