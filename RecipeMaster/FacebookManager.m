@@ -55,6 +55,7 @@
     FBSDKLoginManager *loginManager = [[FBSDKLoginManager alloc] init];
     [loginManager logOut];
     
+    self.userName = nil;
     self.fullUserStatus = userStatusLogoutText;
     
     [[NSNotificationCenter defaultCenter] postNotificationName:FacebookLogoutNotification object:nil];
@@ -86,11 +87,7 @@
 
 - (BOOL)checkToken {
     
-    if ([FBSDKAccessToken currentAccessToken] != nil) {
-        return YES;
-    } else {
-        return NO;
-    }
+    return ([FBSDKAccessToken currentAccessToken] != nil);
     
 }
 
