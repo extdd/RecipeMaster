@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MainViewModel.h"
 #import "RoundedImage.h"
 
-@interface MainViewController : UIViewController
+@interface MainViewController : UIViewController <MainViewModelDelegate>
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *barUserStatus;
 @property (weak, nonatomic) IBOutlet RoundedImage *recipeImage;

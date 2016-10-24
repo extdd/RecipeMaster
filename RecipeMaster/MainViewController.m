@@ -7,7 +7,6 @@
 //
 
 #import "MainViewController.h"
-#import "MainViewModel.h"
 #import "DetailViewController.h"
 #import "FacebookManager.h"
 #import "Shared.h"
@@ -22,8 +21,10 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-
+    
     mainViewModel = [[MainViewModel alloc] init];
+    mainViewModel.delegate = self;
+    
     facebookManager = [[FacebookManager alloc] init];
 
     self.navigationItem.title = @"RecipeMaster";
@@ -163,14 +164,6 @@
 
 # pragma mark - NOTIFICATIONS
 
-- (void)didLoadData:(NSNotification *)notification {
-    
-    self.barAddButton.enabled = YES;
-    [self updateUI];
-    
-}
-
-
 - (void)didLoadFacebookUserData:(NSNotification *)notification {
     
     [self updateUserStatus];
@@ -189,6 +182,16 @@
     [self updateUserStatus];
     
 }
+
+#pragma mark - DELEGATE
+
+- (void)didLoadData {
+    
+    self.barAddButton.enabled = YES;
+    [self updateUI];
+    
+}
+
 
 #pragma mark - OBSERVERS
 
@@ -209,10 +212,12 @@
                                                  name:FacebookLogoutNotification
                                                object:nil];
     
+    /*
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(didLoadData:)
                                                  name:DataLoadCompleteNotification
                                                object:nil];
+     */
     
 }
 

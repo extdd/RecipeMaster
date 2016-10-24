@@ -21,11 +21,19 @@
     
     NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseData, NSError *error) {
         if (error) {
+            
             NSLog(@"Error: %@", error);
-            complete(nil);
+            if (complete) {
+                complete(nil);
+            }
+            
         } else {
+
             //NSLog(@"%@ %@", response, responseData);
-            complete(responseData);
+            if (complete) {
+                complete(responseData);
+            }
+            
         }
     }];
     
@@ -43,11 +51,18 @@
     
     NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseImage, NSError *error) {
         if (error) {
+            
             NSLog(@"Error: %@", error);
-            complete(nil);
+            if (complete) {
+                complete(nil);
+            }
+            
         } else {
+            
             //NSLog(@"%@ %@", response, responseImage);
-            complete(responseImage);
+            if (complete) {
+                complete(responseImage);
+            }
             
         }
     }];

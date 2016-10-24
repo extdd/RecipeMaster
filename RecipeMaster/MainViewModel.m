@@ -40,7 +40,7 @@
     
     NSArray *imgs = (NSArray *)[data valueForKey:@"imgs"];
     
-    for (NSString *url in imgs){
+    for (NSString *url in imgs) {
         [recipe.images addObject:[[NSMutableDictionary alloc] initWithObjectsAndKeys:url, @"url", [[NSData alloc] init], @"data", nil]];
     }
     
@@ -55,8 +55,11 @@
         if (data) {
             
             [self addRecipeByDictionary:[NSJSONSerialization JSONObjectWithData:data options:0 error:nil]];
-            [[NSNotificationCenter defaultCenter] postNotificationName:DataLoadCompleteNotification object:nil];
             
+            if (self.delegate) {
+                [self.delegate didLoadData];
+            }
+              
         }
     }];
     
