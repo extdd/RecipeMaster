@@ -18,6 +18,5 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *collectionViewHeightConstraint;
 
 @property (strong, nonatomic) DetailViewModel *detailViewModel;
-@property (weak, nonatomic) FacebookManager *facebookManager;
 
 @end

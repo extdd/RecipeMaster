@@ -11,9 +11,11 @@
 
 @interface FacebookManager : NSObject
 
+@property (strong, nonatomic) FacebookManager* manager;
 @property (strong, nonatomic) NSString *userName;
 @property (strong, nonatomic) NSString *fullUserStatus;
 
++ (FacebookManager *)sharedManager;
 - (void)loginFromViewController:(UIViewController *)viewController;
 - (void)logout;
 - (void)getUserData;

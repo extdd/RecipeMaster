@@ -19,6 +19,27 @@
     
 }
 
+#pragma mark - SINGLETON
+
++ (FacebookManager *)sharedManager {
+   
+    static FacebookManager *sharedManager;
+    static dispatch_once_t onceToken;
+    
+    dispatch_once(&onceToken, ^{
+        
+        if (!sharedManager) {
+            sharedManager = [[FacebookManager alloc] init];
+        }
+  
+    });
+    
+    return sharedManager;
+    
+}
+
+#pragma mark - INIT
+
 - (instancetype)init {
     
     self = [super init];
@@ -32,6 +53,8 @@
     return self;
     
 }
+
+#pragma mark - LOGIN
 
 - (void)loginFromViewController:(UIViewController *)viewController {
     
@@ -49,6 +72,14 @@
     
 }
 
+- (BOOL)checkToken {
+    
+    return ([FBSDKAccessToken currentAccessToken] != nil);
+    
+}
+
+#pragma mark - LOGOUT
+
 - (void)logout {
     
     [FBSDKAccessToken setCurrentAccessToken:nil];
@@ -61,6 +92,8 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:FacebookLogoutNotification object:nil];
     
 }
+
+#pragma mark - USER DATA
 
 - (void)getUserData {
     
@@ -82,12 +115,6 @@
          [[NSNotificationCenter defaultCenter] postNotificationName:FacebookUserDataLoadCompleteNotification object:result];
          
      }];
-    
-}
-
-- (BOOL)checkToken {
-    
-    return ([FBSDKAccessToken currentAccessToken] != nil);
     
 }
 

@@ -14,7 +14,6 @@
 @implementation MainViewController {
     
     MainViewModel *mainViewModel;
-    FacebookManager *facebookManager;
 
 }
 
@@ -25,8 +24,6 @@
     mainViewModel = [[MainViewModel alloc] init];
     mainViewModel.delegate = self;
     
-    facebookManager = [[FacebookManager alloc] init];
-
     self.navigationItem.title = @"RecipeMaster";
     self.barUserStatus.title = @"";
     self.barUserStatus.enabled = NO;
@@ -50,24 +47,14 @@
 
 - (void)viewDidLayoutSubviews {
 
-    //NSLog(@"- viewDidLayoutSubviews");
     [super viewDidLayoutSubviews];
     [self.recipeImage updateMask];
 
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    
-    //hide and update circle mask
-    //[self.recipeImage hide];
-    
-}
-
-
 - (void)viewDidAppear:(BOOL)animated {
     
     [self.recipeImage updateMask];
-    //[self.recipeImage show];
     
 }
 
@@ -86,10 +73,12 @@
 
 - (void)updateUserStatus {
     
-    if ([facebookManager checkToken] && !facebookManager.userName) {
-        [facebookManager getUserData];
+    FacebookManager* manager = [FacebookManager sharedManager];
+
+    if ([manager checkToken] && !manager.userName){
+        [manager getUserData];
     } else {
-        self.barUserStatus.title = facebookManager.fullUserStatus;
+        self.barUserStatus.title = manager.fullUserStatus;
     }
     
 }
@@ -110,7 +99,6 @@
     if ([segue.identifier isEqualToString:@"showDetails"]){
         
         DetailViewController *detailViewController = (DetailViewController *)[segue destinationViewController];
-        detailViewController.facebookManager = facebookManager;
         detailViewController.detailViewModel.activeRecipe = mainViewModel.activeRecipe;
     
     }
@@ -127,33 +115,40 @@
 
 - (IBAction)showAlertMenu:(id)sender {
     
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle:nil
-                                                                   message:nil
-                                                            preferredStyle:UIAlertControllerStyleActionSheet];
+    FacebookManager* manager = [FacebookManager sharedManager];
     
-    UIAlertAction *itemRecipe = [UIAlertAction actionWithTitle:NSLocalizedString(@"GetTheRecipe", nil)
-                                                         style:UIAlertActionStyleDefault
-                                                       handler:^(UIAlertAction *action) {
-                                                              [self showDetails];
-                                                          }];
-    
+    UIAlertController* alert;
     UIAlertAction *itemFacebook;
-    if (![facebookManager checkToken]) {
-        
+    UIAlertAction *itemRecipe;
+    UIAlertAction *itemCancel;
+    
+    alert = [UIAlertController alertControllerWithTitle:nil
+                                                message:nil
+                                         preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    itemRecipe = [UIAlertAction actionWithTitle:NSLocalizedString(@"GetTheRecipe", nil)
+                                          style:UIAlertActionStyleDefault
+                                        handler:^(UIAlertAction *action) {
+                                            [self showDetails];
+                                        }];
+    
+    if (![manager checkToken]) {
         itemFacebook = [UIAlertAction actionWithTitle:NSLocalizedString(@"LoginToFacebook", nil)
                                                 style:UIAlertActionStyleDefault
                                               handler:^(UIAlertAction *action) {
-                                                  [facebookManager loginFromViewController:self];
+                                                  [manager loginFromViewController:self];
                                               }];
     } else {
         itemFacebook = [UIAlertAction actionWithTitle:NSLocalizedString(@"LogoutOfFacebook", nil)
                                                 style:UIAlertActionStyleDestructive
                                               handler:^(UIAlertAction *action) {
-                                                  [facebookManager logout];
+                                                  [manager logout];
                                               }];
     }
     
-    UIAlertAction *itemCancel = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel handler:nil];
+    itemCancel = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil)
+                                          style:UIAlertActionStyleCancel
+                                        handler:nil];
     
     [alert addAction:itemRecipe];
     [alert addAction:itemFacebook];
@@ -211,13 +206,6 @@
                                              selector:@selector(didLogoutFacebook:)
                                                  name:FacebookLogoutNotification
                                                object:nil];
-    
-    /*
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(didLoadData:)
-                                                 name:DataLoadCompleteNotification
-                                               object:nil];
-     */
     
 }
 

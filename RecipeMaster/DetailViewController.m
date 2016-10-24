@@ -11,7 +11,6 @@
 #import "GalleryImageCell.h"
 #import "TextCell.h"
 #import "Networking.h"
-//#import "Shared.h"
 
 @implementation DetailViewController {
     
@@ -43,7 +42,7 @@
     [super viewDidLoad];
     
     self.navigationItem.title = self.detailViewModel.activeRecipe.title;
-    self.barUserStatus.title = self.facebookManager.fullUserStatus;
+    self.barUserStatus.title = [FacebookManager sharedManager].fullUserStatus;
     
     [self.tableView registerClass:[TextCell class] forCellReuseIdentifier:@"TextCell"];
     [self.tableView registerClass:[GalleryCell class] forCellReuseIdentifier:@"GalleryCell"];
