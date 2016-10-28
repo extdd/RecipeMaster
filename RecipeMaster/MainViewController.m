@@ -32,15 +32,12 @@
     [self updateUserStatus];
     [self initObservers];
     [self setStatusBarBackgroundColor:[UIColor colorWithRed:0.83 green:0.18 blue:0.18 alpha:1.0]];
-    
-    //for testing only
     [self.recipeImage addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapRecipeImage)]];
     
 }
 
 - (void)didTapRecipeImage {
-    
-    //for testing only
+
     [self showDetails];
     
 }

@@ -45,6 +45,7 @@
     }
     
     self.activeRecipe = recipe;
+    
 }
 
 # pragma mark - REMOTE DATA
