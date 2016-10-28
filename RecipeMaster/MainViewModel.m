@@ -21,7 +21,7 @@
     self = [super init];
     if (self) {
         
-        requestURL = @"http://mooduplabs.com/test/info.php";
+        requestURL = @"http://extdd.com/projects/recipeMaster/recipe.php";
         [self loadRemoteData];
         
     }
