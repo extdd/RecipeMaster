@@ -1,5 +1,5 @@
 //
-//  ImagesTableCell.h
+//  GalleryCell.h
 //  RecipeMaster
 //
 //  Created by Krzysztof Ignac on 15.10.2016.
@@ -7,14 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GalleryCell.h"
+#import "GalleryCollectionView.h"
 
-@interface GalleryCell : UITableViewCell <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface GalleryCell : UITableViewCell
 
-@property (strong, nonatomic) UITextView *textView;
-@property (strong, nonatomic) UICollectionView *collectionView;
-@property (strong, nonatomic) NSArray *images;
-
-- (CGSize)updateSizeByWidth:(CGFloat)width;
+@property (strong, nonatomic) GalleryCollectionView *collectionView;
 
 @end
