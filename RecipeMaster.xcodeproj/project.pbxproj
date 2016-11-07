@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01294CC27AEBD58585726B8B /* libPods-RecipeMaster.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38BA3B27D7F4DD4FAF5B1DB0 /* libPods-RecipeMaster.a */; };
 		07A5856DC5ED8BA510911723 /* libPods-RecipeMasterUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87268792816B9E628F322EF4 /* libPods-RecipeMasterUITests.a */; };
 		2ED0F884AE99094B4F1D8A2B /* libPods-RecipeMaster.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9281164DB67C2E9D90BF80BA /* libPods-RecipeMaster.a */; };
 		3C44DA443E9CFD3613A9C8BF /* libPods-RecipeMasterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7F66B93D5C16B8F22EF4E4 /* libPods-RecipeMasterTests.a */; };
@@ -14,6 +15,8 @@
 		B800D31E1DB23A2100336364 /* TextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B800D31C1DB23A2100336364 /* TextCell.m */; };
 		B800D3231DB23A5300336364 /* GalleryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B800D3211DB23A5300336364 /* GalleryCell.m */; };
 		B816B8841DAE9153002AF2C7 /* Shared.m in Sources */ = {isa = PBXBuildFile; fileRef = B816B8831DAE9153002AF2C7 /* Shared.m */; };
+		B81A10B41DD094F10036AAB1 /* DetailViewGalleryController.m in Sources */ = {isa = PBXBuildFile; fileRef = B81A10B31DD094F10036AAB1 /* DetailViewGalleryController.m */; };
+		B81A10B71DD0967C0036AAB1 /* GalleryCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B81A10B61DD0967C0036AAB1 /* GalleryCollectionView.m */; };
 		B81A79A31DAE373400EE25C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B81A79A21DAE373400EE25C7 /* main.m */; };
 		B81A79A61DAE373400EE25C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B81A79A51DAE373400EE25C7 /* AppDelegate.m */; };
 		B81A79A91DAE373400EE25C7 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B81A79A81DAE373400EE25C7 /* MainViewController.m */; };
@@ -30,7 +33,7 @@
 		B8D3CC2A1DAEE2E700D7194F /* FacebookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D3CC291DAEE2E700D7194F /* FacebookManager.m */; };
 		B8D3CC311DAF7FF700D7194F /* RoundedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D3CC301DAF7FF700D7194F /* RoundedImage.m */; };
 		B8D3CC341DAF8DE100D7194F /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D3CC331DAF8DE100D7194F /* Networking.m */; };
-		B8F0B8D61DB0CDD100D472AC /* GalleryImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F0B8D51DB0CDD100D472AC /* GalleryImageCell.m */; };
+		B8F0B8D61DB0CDD100D472AC /* GalleryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F0B8D51DB0CDD100D472AC /* GalleryCollectionViewCell.m */; };
 		B8F1E6531DB7CDE5004577B4 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B8F1E6521DB7CDE5004577B4 /* .gitignore */; };
 		BEE7D26F4F13D479BC3BE040 /* libPods-RecipeMasterUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D559862D8B48323D3F9E14C /* libPods-RecipeMasterUITests.a */; };
 /* End PBXBuildFile section */
@@ -73,6 +76,10 @@
 		B800D3211DB23A5300336364 /* GalleryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryCell.m; sourceTree = "<group>"; };
 		B816B8821DAE9153002AF2C7 /* Shared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shared.h; sourceTree = "<group>"; };
 		B816B8831DAE9153002AF2C7 /* Shared.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shared.m; sourceTree = "<group>"; };
+		B81A10B21DD094F10036AAB1 /* DetailViewGalleryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewGalleryController.h; sourceTree = "<group>"; };
+		B81A10B31DD094F10036AAB1 /* DetailViewGalleryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewGalleryController.m; sourceTree = "<group>"; };
+		B81A10B51DD0967C0036AAB1 /* GalleryCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryCollectionView.h; sourceTree = "<group>"; };
+		B81A10B61DD0967C0036AAB1 /* GalleryCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryCollectionView.m; sourceTree = "<group>"; };
 		B81A799E1DAE373400EE25C7 /* RecipeMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B81A79A21DAE373400EE25C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B81A79A41DAE373400EE25C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -105,8 +112,8 @@
 		B8D3CC301DAF7FF700D7194F /* RoundedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundedImage.m; sourceTree = "<group>"; };
 		B8D3CC321DAF8DE100D7194F /* Networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		B8D3CC331DAF8DE100D7194F /* Networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
-		B8F0B8D41DB0CDD100D472AC /* GalleryImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryImageCell.h; sourceTree = "<group>"; };
-		B8F0B8D51DB0CDD100D472AC /* GalleryImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryImageCell.m; sourceTree = "<group>"; };
+		B8F0B8D41DB0CDD100D472AC /* GalleryCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryCollectionViewCell.h; sourceTree = "<group>"; };
+		B8F0B8D51DB0CDD100D472AC /* GalleryCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryCollectionViewCell.m; sourceTree = "<group>"; };
 		B8F1E6521DB7CDE5004577B4 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
 		BC7F66B93D5C16B8F22EF4E4 /* libPods-RecipeMasterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RecipeMasterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC969AD2517ADEE02126A4F /* Pods-RecipeMasterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeMasterUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeMasterUITests/Pods-RecipeMasterUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ED0F884AE99094B4F1D8A2B /* libPods-RecipeMaster.a in Frameworks */,
+				01294CC27AEBD58585726B8B /* libPods-RecipeMaster.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +249,8 @@
 				B81A79A81DAE373400EE25C7 /* MainViewController.m */,
 				B8B1230A1DAE583B007C3119 /* DetailViewController.h */,
 				B8B1230B1DAE583B007C3119 /* DetailViewController.m */,
+				B81A10B21DD094F10036AAB1 /* DetailViewGalleryController.h */,
+				B81A10B31DD094F10036AAB1 /* DetailViewGalleryController.m */,
 				B8B1231D1DAE597A007C3119 /* Subview */,
 			);
 			name = View;
@@ -286,8 +296,10 @@
 				B800D31C1DB23A2100336364 /* TextCell.m */,
 				B800D3201DB23A5300336364 /* GalleryCell.h */,
 				B800D3211DB23A5300336364 /* GalleryCell.m */,
-				B8F0B8D41DB0CDD100D472AC /* GalleryImageCell.h */,
-				B8F0B8D51DB0CDD100D472AC /* GalleryImageCell.m */,
+				B81A10B51DD0967C0036AAB1 /* GalleryCollectionView.h */,
+				B81A10B61DD0967C0036AAB1 /* GalleryCollectionView.m */,
+				B8F0B8D41DB0CDD100D472AC /* GalleryCollectionViewCell.h */,
+				B8F0B8D51DB0CDD100D472AC /* GalleryCollectionViewCell.m */,
 				B8D3CC2F1DAF7FF700D7194F /* RoundedImage.h */,
 				B8D3CC301DAF7FF700D7194F /* RoundedImage.m */,
 			);
@@ -603,13 +615,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B816B8841DAE9153002AF2C7 /* Shared.m in Sources */,
+				B81A10B41DD094F10036AAB1 /* DetailViewGalleryController.m in Sources */,
 				B81A79A91DAE373400EE25C7 /* MainViewController.m in Sources */,
-				B8F0B8D61DB0CDD100D472AC /* GalleryImageCell.m in Sources */,
+				B8F0B8D61DB0CDD100D472AC /* GalleryCollectionViewCell.m in Sources */,
 				B8D3CC311DAF7FF700D7194F /* RoundedImage.m in Sources */,
 				B8D3CC341DAF8DE100D7194F /* Networking.m in Sources */,
 				B8B123181DAE5893007C3119 /* Recipe.m in Sources */,
 				B800D3231DB23A5300336364 /* GalleryCell.m in Sources */,
 				B8B123121DAE585C007C3119 /* DetailViewModel.m in Sources */,
+				B81A10B71DD0967C0036AAB1 /* GalleryCollectionView.m in Sources */,
 				B81A79A61DAE373400EE25C7 /* AppDelegate.m in Sources */,
 				B81A79A31DAE373400EE25C7 /* main.m in Sources */,
 				B8B1230F1DAE5851007C3119 /* MainViewModel.m in Sources */,

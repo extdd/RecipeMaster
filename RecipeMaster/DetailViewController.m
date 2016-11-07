@@ -7,19 +7,13 @@
 //
 
 #import "DetailViewController.h"
-#import "GalleryCell.h"
-#import "GalleryImageCell.h"
+#import "FacebookManager.h"
 #import "TextCell.h"
-#import "Networking.h"
+#import "GalleryCell.h"
 
 @implementation DetailViewController {
     
-    int colsNum; //number of visible columns in collection view
-    CGFloat spacing; //one value for cells spacing, lines spacing & insets
-    CGFloat cellWidth; //calculated by screen size, colsNum & spacing
-    CGFloat cellHeight; //calculated by cellWidth
     CGFloat headerHeight;
-    GalleryCell *galleryCell;
     
 }
 
@@ -29,7 +23,11 @@
     if (self) {
         
         headerHeight = 50;
+        
         self.detailViewModel = [[DetailViewModel alloc] init];
+        self.galleryController = [[DetailViewGalleryController alloc] init];
+        self.galleryController.detailViewModel = self.detailViewModel;
+        self.galleryController.tableView = self.tableView;
         [self initObservers];
         
     }
@@ -83,8 +81,8 @@
         
         cell = [tableView dequeueReusableCellWithIdentifier:@"GalleryCell" forIndexPath:indexPath];
         
-        galleryCell = (GalleryCell *)cell;
-        galleryCell.images = self.detailViewModel.activeRecipe.images;
+        GalleryCell *galleryCell = (GalleryCell *)cell;
+        self.galleryController.gallery = galleryCell.collectionView;
 
     } else {
 
@@ -106,14 +104,26 @@
 
 #pragma mark - TABLE VIEW DELEGATE
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSString *cellId = [self.detailViewModel.tableData[indexPath.section] valueForKey:@"id"];
+    
+    if ([cellId isEqualToString:@"images"] && self.galleryController.gallery) {
+        
+        [self.galleryController.gallery setCollectionViewDataSourceDelegate:self.galleryController];
+        
+    }
+    
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSString *cellId = [self.detailViewModel.tableData[indexPath.section] valueForKey:@"id"];
     
-    if ([cellId isEqualToString:@"images"] && galleryCell) {
-
-        CGSize cellSize = [galleryCell updateSizeByWidth:self.tableView.frame.size.width];
-        return cellSize.height;
+    if ([cellId isEqualToString:@"images"] && self.galleryController.gallery) {
+        
+        [self.galleryController.gallery updateByContainerSize:self.tableView.frame.size];
+        return self.galleryController.gallery.size.height;
         
     } else {
         
