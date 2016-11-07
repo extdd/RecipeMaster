@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01294CC27AEBD58585726B8B /* libPods-RecipeMaster.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38BA3B27D7F4DD4FAF5B1DB0 /* libPods-RecipeMaster.a */; };
 		07A5856DC5ED8BA510911723 /* libPods-RecipeMasterUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87268792816B9E628F322EF4 /* libPods-RecipeMasterUITests.a */; };
 		2ED0F884AE99094B4F1D8A2B /* libPods-RecipeMaster.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9281164DB67C2E9D90BF80BA /* libPods-RecipeMaster.a */; };
 		3C44DA443E9CFD3613A9C8BF /* libPods-RecipeMasterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7F66B93D5C16B8F22EF4E4 /* libPods-RecipeMasterTests.a */; };
@@ -127,7 +126,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ED0F884AE99094B4F1D8A2B /* libPods-RecipeMaster.a in Frameworks */,
-				01294CC27AEBD58585726B8B /* libPods-RecipeMaster.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +412,7 @@
 		B81A79961DAE373400EE25C7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = EXTENDED;
 				TargetAttributes = {
 					B81A799D1DAE373400EE25C7 = {
