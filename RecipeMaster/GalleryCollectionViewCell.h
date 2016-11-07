@@ -1,5 +1,5 @@
 //
-//  ThumbCell.h
+//  GalleryCollectionViewCell.h
 //  RecipeMaster
 //
 //  Created by Krzysztof Ignac on 14.10.2016.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GalleryImageCell : UICollectionViewCell
+@interface GalleryCollectionViewCell : UICollectionViewCell
 
 @property (strong, nonatomic) UIImageView *imageView;
 

@@ -1,14 +1,14 @@
 //
-//  ThumbCell.m
+//  GalleryCollectionViewCell.m
 //  RecipeMaster
 //
 //  Created by Krzysztof Ignac on 14.10.2016.
 //  Copyright © 2016 EXTENDED. All rights reserved.
 //
 
-#import "GalleryImageCell.h"
+#import "GalleryCollectionViewCell.h"
 
-@implementation GalleryImageCell
+@implementation GalleryCollectionViewCell
 
 - (instancetype)initWithFrame:(CGRect)frame {
     
@@ -28,6 +28,7 @@
     self.imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
     self.imageView.translatesAutoresizingMaskIntoConstraints = NO;
     self.imageView.contentMode = UIViewContentModeScaleAspectFill;
+    self.imageView.layer.masksToBounds = YES;
     [self addSubview:self.imageView];
     
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.imageView
