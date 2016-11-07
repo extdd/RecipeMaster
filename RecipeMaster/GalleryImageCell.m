@@ -27,6 +27,7 @@
     
     self.imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
     self.imageView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.imageView.contentMode = UIViewContentModeScaleAspectFill;
     [self addSubview:self.imageView];
     
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.imageView
